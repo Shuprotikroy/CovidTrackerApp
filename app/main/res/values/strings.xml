@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">CovidTracker</string>
+    <string-array name="States">
+        <item>Select a State/UT</item>
+        <item>Maharashtra</item>
+        <item>Tamil Nadu</item>
+        <item>Delhi</item>
+        <item>Kerala</item>
+        <item>Telangana</item>
+        <item>Uttar Pradesh</item>
+        <item>Andhra Pradesh</item>
+        <item>Rajasthan</item>
+        <item>Madhya Pradesh</item>
+        <item>Karnataka</item>
+        <item>Gujarat</item>
+        <item>Jammu and Kashmir</item>
+        <item>Haryana</item>
+        <item>Punjab</item>
+        <item>West Bengal</item>
+        <item>Bihar</item>
+        <item>Assam</item>
+        <item>Uttarakhand</item>
+        <item>Odisha</item>
+        <item>Chandigarh</item>
+        <item>Ladakh</item>
+        <item>Andaman and Nicobar Islands</item>
+        <item>Chattisgarh</item>
+        <item>Goa</item>
+        <item>Himachal Pradesh</item>
+        <item>Puducherry</item>
+        <item>Jharkand</item>
+        <item>Manipur</item>
+        <item>Mizoram</item>
+        <item>Arunachal Pradesh</item>
+        <item>Dadra and Nagar Haveli</item>
+        <item>Daman and Diu</item>
+        <item>Lakshadweep</item>
+        <item>Meghalaya</item>
+        <item>Nagaland</item>
+        <item>Sikkim</item>
+        <item>Tripura</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
