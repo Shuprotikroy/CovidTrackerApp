@@ -5,7 +5,7 @@ import com.github.mikephil.charting.components.MarkerView
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.highlight.Highlight
 import kotlinx.android.synthetic.main.marker_view.view.*
-
+//Marker class for custom marker
 class CustomMarker(context: Context, layoutResource: Int):  MarkerView(context, layoutResource) {
     override fun refreshContent(e: Entry?, highlight: Highlight?) {
         tvPrice.setText(""+e!!.`val`.toInt())
