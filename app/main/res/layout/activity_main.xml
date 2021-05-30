@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:forceDarkAllowed="false"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Confirmedtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="Confirmed"
+        android:textColor="#4682B4"
+        android:textFontWeight="50"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Activetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="Active"
+        android:textColor="#1E90FF"
+        android:textFontWeight="50"
+        android:textSize="14dp"
+        app:layout_constraintStart_toEndOf="@+id/Confirmedtxt"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Recoveredtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="Recovered"
+        android:textColor="	#32CD32"
+        android:textFontWeight="50"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toStartOf="@+id/Deathstxt"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Deathstxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="Deaths"
+        android:textColor="#FF0000"
+        android:textFontWeight="50"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/confirmedsubtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="2,5771539"
+        android:textColor="#4682B4"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Confirmedtxt" />
+
+    <TextView
+        android:id="@+id/Activesubtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="3125056"
+        android:textColor="#1E90FF"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/confirmedsubtxt"
+        app:layout_constraintTop_toBottomOf="@+id/Activetxt" />
+
+    <TextView
+        android:id="@+id/Recoveredsubtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="22348900"
+        android:textColor="	#32CD32"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/Deathssubtxt"
+        app:layout_constraintTop_toBottomOf="@+id/Recoveredtxt" />
+
+    <TextView
+        android:id="@+id/Deathssubtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="287157"
+        android:textColor="#FF0000"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Deathstxt" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/black"
+        android:entries="@array/States"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmedsubtxt" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="190dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" >
+
+<!--        <com.jjoe64.graphview.GraphView-->
+<!--            android:id="@+id/graph"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:padding="10dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_height="200dp"/>-->
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dip" />
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart2"
+            android:layout_marginTop="300dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dip" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/confirmdelta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="23dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="(+318821)"
+        android:textColor="#4682B4"
+        android:textFontWeight="50"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toStartOf="@+id/Activesubtxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmedsubtxt" />
+
+    <TextView
+        android:id="@+id/recoverdelta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="23dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="(+318821)"
+        android:textSize="12dp"
+        android:textColor="#32CD32"
+        android:textFontWeight="50"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="@+id/Recoveredsubtxt"
+        app:layout_constraintStart_toEndOf="@+id/Activesubtxt"
+        app:layout_constraintTop_toBottomOf="@+id/confirmedsubtxt" />
+
+    <TextView
+        android:id="@+id/deathdelta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:fontFamily="@font/gilroy_bold"
+        android:text="(+318821)"
+        android:textSize="12dp"
+        android:textColor="#FF0000"
+        android:textFontWeight="50"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Recoveredsubtxt"
+        app:layout_constraintTop_toBottomOf="@+id/confirmedsubtxt" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
