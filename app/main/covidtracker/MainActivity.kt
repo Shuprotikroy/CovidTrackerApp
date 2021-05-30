@@ -394,6 +394,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 //If nothing is selected,the spinner text is set to GRAY
                 spinnertxt.setTextColor(Color.GRAY)
             }
+            //The logic in 1 is repeated throughout the other spinner selections with their statecodes for eg.AP changed according to the requirement of selection
             1 -> {
                 //The statename variable changes with every selection,for eg. you choose karnataka you'll mention Jobject.getJSONObject("KA") in statename variable
                 val statename = Jobject.getJSONObject("MH")
